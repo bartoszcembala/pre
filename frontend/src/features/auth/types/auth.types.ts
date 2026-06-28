@@ -3,3 +3,8 @@ export type RegisterFormValues = {
   name: string;
   password: string;
 };
+
+export type LoginFormValues = {
+  email: string;
+  password: string;
+};
