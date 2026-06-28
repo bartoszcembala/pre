@@ -1,21 +1,21 @@
 import { useForm } from "react-hook-form";
-import type { LoginFormValues } from "./types";
-import axios from "axios";
+import type { RegisterFormValues } from "./types/auth";
+import { useRegister } from "./hooks/useRegister";
 
 export default function LoginPage() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<LoginFormValues>();
+    reset,
+  } = useForm<RegisterFormValues>();
 
-  async function onSubmit(values: LoginFormValues) {
-    const response = await axios.post(
-      "http://localhost:4000/auth/register",
-      values,
-    );
+  const { registerMutation,  } = useRegister();
 
-    console.log(response);
+  async function onSubmit(values: RegisterFormValues) {
+    registerMutation(values);
+    reset();
+    
   }
 
   return (
