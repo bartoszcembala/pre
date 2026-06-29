@@ -29,7 +29,9 @@ export default function LoginPage() {
           {...register("password", { required: "Password is required" })}
         />{" "}
         {errors.password && <p>{errors.password.message}</p>}
-        <button type="submit">Login</button>
+        <button disabled={mutation.isPending} type="submit">
+          {mutation.isPending ? "Loading..." : "Login"}
+        </button>
       </form>
     </div>
   );

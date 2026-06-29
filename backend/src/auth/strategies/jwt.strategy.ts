@@ -4,7 +4,7 @@ import { Request } from 'express';
 import { Strategy } from 'passport-jwt';
 
 type JwtPayload = {
-  sub: number;
+  sub: string;
   email: string;
 };
 

@@ -34,7 +34,9 @@ export default function RegisterPage() {
         />
         {errors.password && <p>{errors.password.message}</p>}
 
-        <button type="submit">Register</button>
+        <button disabled={mutation.isPending} type="submit">
+          {mutation.isPending ? "Loading..." : "Register"}
+        </button>
       </form>
     </div>
   );

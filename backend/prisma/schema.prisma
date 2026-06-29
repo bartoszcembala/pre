@@ -33,7 +33,7 @@ model User {
 model Project {
   id          String @id @default(cuid())
   title       String
-  description String
+  description String? 
 
   projectMemberId String
   projectMember User   @relation(fields: [projectMemberId], references: [id], onDelete: Cascade)
