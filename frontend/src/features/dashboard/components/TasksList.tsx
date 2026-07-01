@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import { useTasks } from "../hooks/useTasks";
 import { useDeleteTask } from "../hooks/useDeleteTask";
 

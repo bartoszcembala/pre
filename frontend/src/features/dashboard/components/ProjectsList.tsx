@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import type { ProjectInterface } from "../types/project.types";
 
 export default function ProjectsList({ data }: { data: ProjectInterface[] }) {

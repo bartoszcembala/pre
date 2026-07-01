@@ -1,5 +1,5 @@
 import { useProject } from "../hooks/useProject";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 
 import TasksList from "../components/TasksList";
 import TaskForm from "../components/TaskForm";
