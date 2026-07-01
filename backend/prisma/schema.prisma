@@ -48,7 +48,7 @@ model Project {
 model Task {
   id String @id @default(cuid())
   title String
-  description String
+  description String?
   status TaskStatus @default(TODO)
   priority TaskPriority @default(LOW)
 

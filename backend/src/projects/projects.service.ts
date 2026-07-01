@@ -23,4 +23,13 @@ export class ProjectsService {
       },
     });
   }
+
+  getById(userId: string, projectId: string) {
+    return this.prismaService.project.findFirst({
+      where: {
+        id: projectId,
+        projectMemberId: userId,
+      },
+    });
+  }
 }
